@@ -13,9 +13,9 @@ sorting/SelectionSort.java
  sorting.SelectionSort
 arrays/KadaneAlgorithm.java
  arrays.KadaneAlgorithm
-arrays/SumOfArrayElementsEqualsGivenNumber.java
- arrays.SumOfArrayElementsEqualsGivenNumber
 arrays/DynamicArray.java
  arrays.DynamicArray
 arrays/ValidAnagram.java
  arrays.ValidAnagram
+arrays/SumOfArrayElementsEqualsGivenNumber.java
+ arrays.SumOfArrayElementsEqualsGivenNumber

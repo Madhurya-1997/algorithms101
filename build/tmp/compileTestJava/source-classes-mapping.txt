@@ -1,18 +1,18 @@
 arrays/KadaneAlgorithmTests.java
  arrays.KadaneAlgorithmTests
-arrays/ValidAnagramTests.java
- arrays.ValidAnagramTests
+arrays/DynamicArrayTests.java
+ arrays.DynamicArrayTests
 arrays/MyLinkedListTests.java
  arrays.MyLinkedListTests
-arrays/SumOfArrayElementsEqualsGivenNumberTests.java
- arrays.SumOfArrayElementsEqualsGivenNumberTests
+arrays/MaxDifferenceBetween2ElementsTest.java
+ arrays.MaxDifferenceBetween2ElementsTest
 arrays/ArrayLeftRotationTests.java
  arrays.ArrayLeftRotationTests
 sorting/SortingTests.java
  sorting.SortingTests
 arrays/ContainsDuplicateTests.java
  arrays.ContainsDuplicateTests
-arrays/MaxDifferenceBetween2ElementsTest.java
- arrays.MaxDifferenceBetween2ElementsTest
-arrays/DynamicArrayTests.java
- arrays.DynamicArrayTests
+arrays/ValidAnagramTests.java
+ arrays.ValidAnagramTests
+arrays/SumOfArrayElementsEqualsGivenNumberTests.java
+ arrays.SumOfArrayElementsEqualsGivenNumberTests
