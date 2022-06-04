@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="arrays.ValidAnagramTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-06-03T10:36:27" hostname="LAPTOP-Q20J6JPV" time="0.033">
+  <properties/>
+  <testcase name="isValidAnagramTest1()" classname="arrays.ValidAnagramTests" time="0.029"/>
+  <testcase name="isValidAnagramTest2()" classname="arrays.ValidAnagramTests" time="0.001"/>
+  <testcase name="isValidAnagramTest3()" classname="arrays.ValidAnagramTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

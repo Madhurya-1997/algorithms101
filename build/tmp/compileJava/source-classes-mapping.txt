@@ -1,0 +1,21 @@
+sorting/BubbleSort.java
+ sorting.BubbleSort
+arrays/MaxDifferenceBetween2Elements.java
+ arrays.MaxDifferenceBetween2Elements
+arrays/ContainsDuplicate.java
+ arrays.ContainsDuplicate
+arrays/ArrayLeftRotation.java
+ arrays.ArrayLeftRotation
+arrays/MyLinkedList.java
+ arrays.MyLinkedList
+ arrays.Node
+sorting/SelectionSort.java
+ sorting.SelectionSort
+arrays/KadaneAlgorithm.java
+ arrays.KadaneAlgorithm
+arrays/SumOfArrayElementsEqualsGivenNumber.java
+ arrays.SumOfArrayElementsEqualsGivenNumber
+arrays/DynamicArray.java
+ arrays.DynamicArray
+arrays/ValidAnagram.java
+ arrays.ValidAnagram
