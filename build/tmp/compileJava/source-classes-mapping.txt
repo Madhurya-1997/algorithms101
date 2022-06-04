@@ -19,3 +19,5 @@ arrays/ValidAnagram.java
  arrays.ValidAnagram
 arrays/SumOfArrayElementsEqualsGivenNumber.java
  arrays.SumOfArrayElementsEqualsGivenNumber
+arrays/HashingProblems.java
+ arrays.HashingProblems
