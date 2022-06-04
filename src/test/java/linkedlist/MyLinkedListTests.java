@@ -1,4 +1,4 @@
-package arrays;
+package linkedlist;
 
 import linkedlist.MyLinkedList;
 import org.junit.jupiter.api.Assertions;
