@@ -1,4 +1,4 @@
-package arrays;
+package linkedlist;
 
 
 class Node {
