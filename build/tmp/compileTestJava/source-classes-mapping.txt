@@ -1,20 +1,30 @@
+hashing/HashTableTests.java
+ hashing.HashTableTests
 arrays/KadaneAlgorithmTests.java
  arrays.KadaneAlgorithmTests
-arrays/DynamicArrayTests.java
- arrays.DynamicArrayTests
-arrays/MyLinkedListTests.java
- arrays.MyLinkedListTests
-arrays/MaxDifferenceBetween2ElementsTest.java
- arrays.MaxDifferenceBetween2ElementsTest
-arrays/ArrayLeftRotationTests.java
- arrays.ArrayLeftRotationTests
-sorting/SortingTests.java
- sorting.SortingTests
-arrays/ContainsDuplicateTests.java
- arrays.ContainsDuplicateTests
 arrays/ValidAnagramTests.java
  arrays.ValidAnagramTests
+arrays/ArrayLeftRotationTests.java
+ arrays.ArrayLeftRotationTests
+arrays/SeparateZerosAndOnesTests.java
+ arrays.SeparateZerosAndOnesTests
+linkedlist/MyLinkedListTests.java
+ linkedlist.MyLinkedListTests
+arrays/MaxDifferenceBetween2ElementsTest.java
+ arrays.MaxDifferenceBetween2ElementsTest
+arrays/DynamicArrayTests.java
+ arrays.DynamicArrayTests
+arrays/NumberOccurringOddTimesTests.java
+ arrays.NumberOccurringOddTimesTests
 arrays/SumOfArrayElementsEqualsGivenNumberTests.java
  arrays.SumOfArrayElementsEqualsGivenNumberTests
-arrays/HashingProblemsTests.java
- arrays.HashingProblemsTests
+sorting/SortingTests.java
+ sorting.SortingTests
+hashing/HashingProblemsTests.java
+ hashing.HashingProblemsTests
+arrays/ContainsDuplicateTests.java
+ arrays.ContainsDuplicateTests
+graphs/GraphTests.java
+ graphs.GraphTests
+trees/BinarySearchTreeTests.java
+ trees.BinarySearchTreeTests

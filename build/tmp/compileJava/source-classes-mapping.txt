@@ -1,3 +1,9 @@
+hashing/HashTable.java
+ hashing.HashNode
+ hashing.HashTable
+linkedlist/MyLinkedList.java
+ linkedlist.MyLinkedList
+ linkedlist.Node
 sorting/BubbleSort.java
  sorting.BubbleSort
 arrays/MaxDifferenceBetween2Elements.java
@@ -6,18 +12,31 @@ arrays/ContainsDuplicate.java
  arrays.ContainsDuplicate
 arrays/ArrayLeftRotation.java
  arrays.ArrayLeftRotation
-arrays/MyLinkedList.java
- arrays.MyLinkedList
- arrays.Node
-sorting/SelectionSort.java
- sorting.SelectionSort
-arrays/KadaneAlgorithm.java
- arrays.KadaneAlgorithm
-arrays/DynamicArray.java
- arrays.DynamicArray
 arrays/ValidAnagram.java
  arrays.ValidAnagram
+arrays/KadaneAlgorithm.java
+ arrays.KadaneAlgorithm
 arrays/SumOfArrayElementsEqualsGivenNumber.java
  arrays.SumOfArrayElementsEqualsGivenNumber
-arrays/HashingProblems.java
- arrays.HashingProblems
+arrays/DynamicArray.java
+ arrays.DynamicArray
+challenges/StringChallenge.java
+ challenges.StringChallenge
+sorting/SelectionSort.java
+ sorting.SelectionSort
+arrays/SeparateZerosAndOnes.java
+ arrays.SeparateZerosAndOnes
+hashing/HashingProblems.java
+ hashing.HashingProblems
+arrays/NumberOccurringOddTimes.java
+ arrays.NumberOccurringOddTimes
+trees/ProductOfLargestValueInEachLevel.java
+ trees.Node
+ trees.ProductOfLargestValueInEachLevel
+graphs/Graph.java
+ graphs.Graph
+sorting/QuickSort.java
+ sorting.QuickSort
+trees/BinarySearchTree.java
+ trees.BinarySearchTree
+ trees.TreeNode
