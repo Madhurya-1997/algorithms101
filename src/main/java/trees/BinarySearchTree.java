@@ -221,4 +221,20 @@ public class BinarySearchTree {
 
         return node;
     }
+
+
+    /**
+     * height of a binary tree
+     */
+    public int height(TreeNode node) {
+        if (node == null) return -1;
+        return 1 + Math.max(height(node.left), height(node.right));
+    }
+
+    /**
+     * diameter of a binary tree
+     */
+//    public int diameter(TreeNode root) {
+//
+//    }
 }

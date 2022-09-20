@@ -22,4 +22,13 @@ public class SortingTests {
 
         Assertions.assertArrayEquals(sortedArr, actualArr);
     }
+
+    @Test
+    public void quickSortTest() {
+        int[] arr = {64, 25, 12, 22, 11};
+        QuickSort.quickSort(arr, 0, arr.length - 1);
+        int[] actualArr = {11, 12, 22, 25, 64};
+
+        Assertions.assertArrayEquals(arr, actualArr);
+    }
 }
