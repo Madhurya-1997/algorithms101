@@ -60,4 +60,40 @@ public class KadaneAlgorithm {
 
         return maxSoFar;
     }
+
+
+    public static int[] maxSumSubArray(int[] arr) {
+        int maxSumSoFar = 0;
+        int currentSum = 0;
+        int lastIdx = -1;
+        int startIdx = -1;
+
+        for (int i=0; i<arr.length; i++) {
+            currentSum += arr[i];
+            if (currentSum < 0) {
+                currentSum = 0;
+            }
+            if (currentSum > maxSumSoFar) {
+                maxSumSoFar = currentSum;
+                lastIdx = i;
+            }
+        }
+
+        int sum=0;
+        for (int i=lastIdx; i>=0; i--) {
+            sum += arr[i];
+            if (sum == maxSumSoFar) {
+                startIdx = i;
+                break;
+            }
+        }
+
+
+        int[] result = new int[lastIdx-startIdx+1];
+        for (int i=0; i<=lastIdx-startIdx; i++) {
+            result[i] = arr[i+startIdx];
+        }
+
+        return result;
+    }
 }

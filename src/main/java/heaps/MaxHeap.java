@@ -21,18 +21,19 @@ public class MaxHeap {
     }
 
     public void maxHeapify(int[] A, int i) {
+        setHeapSize(A.length);
         int largestIdx = Integer.MIN_VALUE;
 
         int leftIdx = 2*i + 1;
         int rightIdx = 2*i + 2;
 
-        if (leftIdx < 10 && A[i] < A[leftIdx]) {
+        if (leftIdx < getHeapSize() && A[i] < A[leftIdx]) {
             largestIdx = leftIdx;
         } else {
             largestIdx = i;
         }
 
-        if (rightIdx < 10 && A[largestIdx] < A[rightIdx]) {
+        if (rightIdx < getHeapSize() && A[largestIdx] < A[rightIdx]) {
             largestIdx = rightIdx;
         }
 
@@ -43,7 +44,9 @@ public class MaxHeap {
     }
 
     public void buildMaxHeap(int[] A){
-
+        for (int i = (int)Math.floor(A.length/2) - 1; i>=0; i--) {
+            maxHeapify(A, i);
+        }
     }
 
     private void swap(int[] arr, int i, int j) {
