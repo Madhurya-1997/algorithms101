@@ -7,14 +7,8 @@ package arrays;
  */
 public class SeparateZerosAndOnes {
     public static void main(String[] args) {
-        int[] arr = {0,1,1,0,1,1,0};
-        int[] result = separate(arr);
-
-        for (int i: result){
-            System.out.println(i);
-        }
+        System.out.println(0%2);
     }
-
     /**
      * This approach is identical to a quick sort algorithm
      *
@@ -29,22 +23,20 @@ public class SeparateZerosAndOnes {
         // {0,0,1,1,1,1,0}
         int N=arr.length;
         int left=0;
-        int right=N - 2;
-        int pivot = arr[N - 1];
+        int right=N - 1;
 
-        while (left < right-1) {
+        while (left < right) {
 
-            while(arr[left] == pivot && left < right) {
+            while (arr[left] == 0 && left < right) {
                 left++;
             }
-            while(arr[right] != pivot && left < right-1) {
+            while (arr[right] == 1 && left < right) {
                 right--;
             }
-            if (left < right-1) {
-                swap(arr, left, right);
-            }
+            swap(arr, left, right);
+            left++;
+            right--;
         }
-        swap(arr, right, pivot);
         return arr;
     }
 
@@ -52,5 +44,33 @@ public class SeparateZerosAndOnes {
         int temp = arr[left];
         arr[left] = arr[right];
         arr[right] = temp;
+    }
+
+
+    /**
+     * Using even and odd number concept => another mock of partition algo of quick sort
+     *
+     * increase left by 1 until you get an odd number
+     * decrease right by 1 until you get an even number
+     *
+     * this method also can be used to separate evens and odds
+     */
+    public static int[] separateUsingBitOperation(int[] arr) {
+        int N = arr.length;
+        int left = 0;
+        int right = N-1;
+
+        while (left < right) {
+            while(arr[left]%2 == 0 && left < right) {
+                left++;
+            }
+            while(arr[right]%2 == 1 && left < right) {
+                right--;
+            }
+            swap(arr, left, right);
+            left++;
+            right--;
+        }
+        return arr;
     }
 }

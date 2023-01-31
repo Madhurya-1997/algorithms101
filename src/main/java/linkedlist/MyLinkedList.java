@@ -1,26 +1,12 @@
 package linkedlist;
 
-
-class Node {
-    private int data;
-    Node next;
-
-    public Node(int data) {
-        this.data = data;
-    }
-
-    public int getData() {
-        return data;
-    }
-}
-
 public class MyLinkedList {
 
-    private Node head;
+    private ListNode head;
     private int size = 0;
 
     public void addFront(int data) { // O(1)
-        Node newNode = new Node(data);
+        ListNode newNode = new ListNode(data);
         if (this.head == null) {
             head = newNode;
             size++;
@@ -33,14 +19,14 @@ public class MyLinkedList {
     }
 
     public void addBack(int data) {
-        Node newNode = new Node(data);
+        ListNode newNode = new ListNode(data);
 
         if (head == null) {
             head = newNode;
             size++;
             return;
         }
-        Node currentNode = head;
+        ListNode currentNode = head;
         while(currentNode.next != null) {
             currentNode = currentNode.next;
         }
@@ -58,7 +44,7 @@ public class MyLinkedList {
     public int getLast() { // O(N)
         if (head == null) throw new IllegalArgumentException("Empty linked list !!!");
 
-        Node currentNode = head;
+        ListNode currentNode = head;
 
         while(currentNode.next != null) {
             currentNode = currentNode.next;
@@ -81,7 +67,7 @@ public class MyLinkedList {
         }
 
         int size = 1;
-        Node currentNode = head;
+        ListNode currentNode = head;
         while(currentNode.next != null) {
             size++;
             currentNode = currentNode.next;
@@ -105,7 +91,7 @@ public class MyLinkedList {
             return;
         }
 
-        Node current = head;
+        ListNode current = head;
         while(current.next.getData() != data) {
             current = current.next;
         }

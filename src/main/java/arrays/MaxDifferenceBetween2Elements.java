@@ -28,7 +28,7 @@ public class MaxDifferenceBetween2Elements {
         return currentMax;
     }
 
-    public static int maxDifference(int[] arr) {
+    public static int maxDifferenceUsingKadane(int[] arr) {
         int[] diff = new int[arr.length-1];
 
         int maxSoFar = Integer.MIN_VALUE;
@@ -51,5 +51,23 @@ public class MaxDifferenceBetween2Elements {
         }
 
         return maxSoFar;
+    }
+
+    public static int maxDifferenceOptimized(int[] arr) {
+        int maxDiff = 0;
+        int a = Integer.MAX_VALUE;
+
+        for (int i=0; i<arr.length - 1; i++) {
+            int b = arr[i+1];
+
+            if (arr[i] < a) {
+                a = arr[i];
+            }
+
+            if (b-a > maxDiff) {
+                maxDiff = b - a;
+            }
+        }
+        return maxDiff;
     }
 }

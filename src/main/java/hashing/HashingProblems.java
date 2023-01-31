@@ -3,6 +3,7 @@ package hashing;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class HashingProblems {
 
@@ -76,4 +77,36 @@ public class HashingProblems {
         return true;
 
     }
+
+
+    /**
+     * Find the number of subarrays with sum 0
+     *
+     * {11, 10, -5, -3, -2, 10, 5, -1, -6}
+     * answer = 2
+     */
+    public static int numOfSubArraysWithSumZero(int[] arr) {
+        List<Integer> cumSum = new ArrayList<>();
+        int sum=0;
+        int numOfSubArray=0;
+        for (int i=0; i<arr.length; i++) {
+            sum+=arr[i];
+            if (cumSum.contains(sum)) {
+                numOfSubArray++;
+            }
+            cumSum.add(sum);
+        }
+        return numOfSubArray;
+    }
+
+    /**
+     * Fina the set of 4 elements i,j,k,l in an array such that i+j=k+l
+     *
+     * {6,2,3,4,5}
+     * answer = {((6,2),(3,5)),((6,3),(4,5)),((2,5),(3,4))}
+     */
+    public static void findingSetOf4Elements(int[] A) {
+        Map<Integer, Integer> map = new HashMap<>();
+    }
+
 }

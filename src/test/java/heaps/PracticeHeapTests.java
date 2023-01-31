@@ -26,4 +26,11 @@ public class PracticeHeapTests {
             System.out.print(exp[i] + " ");
         }
     }
+
+    @Test
+    public void topKFrequenciesTest() {
+        int[] input = {1, 1, 1, 1, 2, 2, 10};
+        int[] exp = PracticeHeap.topKFrequencies(input, 2);
+        Assertions.assertArrayEquals(exp, new int[]{1, 2});
+    }
 }

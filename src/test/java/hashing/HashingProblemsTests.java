@@ -51,4 +51,11 @@ public class HashingProblemsTests {
         Assertions.assertEquals(expected, false);
 
     }
+
+    @Test
+    public void numOfSubArraysWithSumZeroTest() {
+        int[] arr1 = {11, 10, -5, -3, -2, 10, 5, -1, -6};
+
+        Assertions.assertEquals(HashingProblems.numOfSubArraysWithSumZero(arr1), 2);
+    }
 }

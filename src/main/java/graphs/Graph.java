@@ -10,7 +10,6 @@ public class Graph {
     private LinkedList<Integer> adj[]; // adjacency list
 
     Graph(int v) {
-        int[] arr = new int[3];
         V = v;
         adj = new LinkedList[v];
         for (int i=0; i<v; i++) {

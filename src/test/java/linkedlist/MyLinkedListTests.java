@@ -81,5 +81,10 @@ public class MyLinkedListTests {
 
     }
 
+    @Test
+    public void detectCycleTest() {
+
+    }
+
 }
 

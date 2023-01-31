@@ -1,6 +1,15 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class Challenge {
+    public static void main(String[] args) {
+        String s = "eat";
+        char[] ch = s.toCharArray();
+        Arrays.sort(ch);
+        String sortedS = new String(ch);
+        System.out.println(sortedS);
+    }
 
     /**
      * Given an array A[] of N positive integers. The task is to find the max value of

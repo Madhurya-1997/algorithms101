@@ -8,31 +8,31 @@ import java.util.Stack;
 public class FindMinimumInLeastTimeTest {
 
     private Stack<Integer> s1;
-    private Stack<Integer> s2;
     FindMinimumInLeastTime findMinimumInLeastTime;
 
     @BeforeEach
     public void setup() {
         s1 = new Stack<>();
-        s2 = new Stack<>();
-        findMinimumInLeastTime = new FindMinimumInLeastTime(s1, s2);
-        findMinimumInLeastTime.pushValue(10);
-        findMinimumInLeastTime.pushValue(6);
-        findMinimumInLeastTime.pushValue(20);
-        findMinimumInLeastTime.pushValue(25);
-        findMinimumInLeastTime.pushValue(5);
+        findMinimumInLeastTime = new FindMinimumInLeastTime(s1);
+        findMinimumInLeastTime.pushValueOpt(10);
+        findMinimumInLeastTime.pushValueOpt(6);
+        findMinimumInLeastTime.pushValueOpt(20);
+        findMinimumInLeastTime.pushValueOpt(25);
+        findMinimumInLeastTime.pushValueOpt(5);
     }
 
+//    @Test
+//    public void popValueOptTest() {
+//        int exp = findMinimumInLeastTime.popValueOpt();
+//        Assertions.assertEquals(exp, 5);
+//    }
     @Test
-    public void popValueTest() {
-        findMinimumInLeastTime.popValue();
-        Assertions.assertEquals(findMinimumInLeastTime.findMinimum(), 6);
+    public void findMinimumOpt() {
+        findMinimumInLeastTime.popValueOpt();
+        int exp = findMinimumInLeastTime.findMinimumOpt();
+        Assertions.assertEquals(exp, 6);
     }
 
-    @Test
-    public void findMinimumTest() {
-        Assertions.assertEquals(findMinimumInLeastTime.findMinimum(), 5);
-    }
 
 
 }

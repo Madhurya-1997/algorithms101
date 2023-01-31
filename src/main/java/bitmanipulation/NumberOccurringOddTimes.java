@@ -1,27 +1,31 @@
-package arrays;
-
+package bitmanipulation;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * find the number occurring odd number of times in an array.
- * Every other element has occurred twice but only 1 element
- * occurred odd number of times
- */
 public class NumberOccurringOddTimes {
-
-    // XOR operation approach
+    /**
+     * Find the number occurring odd number of times in an array,
+     * assuming exactly one number occurs odd times
+     *
+     * Method 1: Bit wise operation
+     */
     public static int numberOccurringOddTimes(int[] arr) {
-        int result = 0;
-        for (int i=0; i<arr.length; i++) {
-            result = result ^ arr[i];
+        int res = 0;
+        for(int i=0; i<arr.length; i++){
+            res = res^arr[i];
         }
-        return result;
+        return res;
     }
 
+    /**
+     * Find the number occurring odd number of times in an array,
+     * assuming exactly one number occurs odd times
+     * Method 2: => Time: O(N) & Space: O(N)
+     * a. use hashmap to store frequencies of each element
+     * b. return the key for which frequency is odd
+     */
 
-    // Hashmap approach
     public static int numberOccurringOddTimesHash(int[] arr) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int result = 0;
@@ -38,6 +42,5 @@ public class NumberOccurringOddTimes {
             }
         }
         return result;
-
     }
 }

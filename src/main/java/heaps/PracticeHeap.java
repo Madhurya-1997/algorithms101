@@ -1,8 +1,23 @@
 package heaps;
 
-import java.util.Arrays;
+import java.lang.reflect.Array;
+import java.util.*;
+
+class HeapNode {
+    int data;
+    int arrIdx;
+    int nextIdx;
+    HeapNode(int data, int arrIdx, int nextIdx) {
+        this.data = data;
+        this.arrIdx = arrIdx;
+        this.nextIdx = nextIdx;
+    }
+}
 
 public class PracticeHeap {
+    public static void main(String[] args) {
+        System.out.println((double)(2 + 3)/2);
+    }
 
     /**
      * Given a min heap, find the max element in the min heap
@@ -163,4 +178,142 @@ public class PracticeHeap {
 
         return result;
     }
+
+    /**
+     * Given an integer array arr and an integer K,
+     * return the K most frequent elements.
+     * You may return the answer in any order
+     *
+     * Input: arr={1,1,2,1,3,2,}, K=2
+     * Output: {1, 2}
+     */
+    public static int[] topKFrequencies(int[] arr, int K) {
+        int[] res = new int[K];
+        Map<Integer, Integer> map = new HashMap<>();
+        List<List<Integer>> freq = new ArrayList<>();
+
+        for (int i=0; i<arr.length; i++) {
+            map.put(arr[i], 1 + map.getOrDefault(arr[i], 0));
+        }
+        for (int i=0; i<arr.length + 1; i++) {
+            freq.add(new ArrayList<>());
+        }
+
+        for (Integer element: map.keySet()) {
+            freq.get(map.get(element)).add(element);
+        }
+
+
+        int count=0;
+        for (int i=freq.size()-1; i>=0; i--) {
+            for (int val: freq.get(i)) {
+                count++;
+
+                int j=0;
+                while (j<K) {
+                    res[j] = val;
+                    j++;
+                }
+            }
+            if (count == K) { break;}
+        }
+
+        return res;
+    }
+
+    /**
+     * Given K-sorted arrays of size N each, merge them
+     *
+     * Method 1:
+     * 1. use merge sort algo to merge all K sorted lists
+     *
+     * Method 2:
+     * 1. create min heap using all the first elements of each list
+     * 2. apply deleteMin to the min heap
+     * 3. keep track of the pointer to the deleted min value
+     */
+    private static void minHeapifyWithNode(HeapNode[] heap, int idx, int size) {
+        int leastIdx;
+        int leftIdx = 2*idx + 1;
+        int rightIdx = 2*idx + 2;
+        if (leftIdx < size && heap[leftIdx].data < heap[idx].data) {
+            leastIdx = leftIdx;
+        } else {
+            leastIdx = idx;
+        }
+
+        if (rightIdx < size && heap[rightIdx].data < heap[leastIdx].data) {
+            leastIdx = rightIdx;
+        }
+
+        if (leastIdx != idx) {
+            swapWithHeapNode(heap, idx, leastIdx);
+            minHeapifyWithNode(heap, leastIdx, size);
+        }
+    }
+    private static void swapWithHeapNode(HeapNode[] heap, int i, int j) {
+        HeapNode temp = heap[j];
+        heap[j] = heap[i];
+        heap[i] = temp;
+    }
+    public static int[] mergeKSortedArrays(int[][] list, int K, int N) {
+        int[] res = new int[N*K];
+
+        HeapNode[] heap = new HeapNode[K];
+
+        // create the min heap
+        for (int i=0; i<list.length; i++) {
+            heap[i] = new HeapNode(list[i][0], i, 0);
+        }
+        for (int i=heap.length/2 - 1; i>=0; i--) {
+            minHeapifyWithNode(heap, i, K);
+        }
+
+        // deleteMin
+        for (int i=0; i<res.length; i++) {
+            HeapNode root = heap[0];
+            res[i] = root.data;
+
+            if (root.nextIdx + 1 < list[root.arrIdx].length) {
+                root.data = list[root.arrIdx][root.nextIdx + 1];
+                root.nextIdx += 1;
+            } else {
+                root.data = Integer.MAX_VALUE;
+            }
+
+            heap[0] = new HeapNode(root.data, root.arrIdx, root.nextIdx);
+            minHeapifyWithNode(heap, 0, K);
+        }
+        return res;
+    }
+
+    /**
+     * Given k-sorted lists,
+     * find the minimum range to which at least
+     * one number belongs from every list.
+     */
+    public static int[] findSmallestRangeFromKSortedLists(int[][] list, int K, int N) {
+        int start=0,end=0; // range
+        HeapNode[] heap = new HeapNode[K];
+
+        int max=Integer.MIN_VALUE; // keep track of the max value while inserting a new element into the min heap
+
+        // min heap build prep starts
+        for (int i=0; i<K; i++) {
+            heap[i].data = list[i][0];
+            heap[i].arrIdx = i;
+            heap[i].nextIdx = 0;
+
+            if (heap[i].data > max) {
+                max = heap[i].data;
+            }
+        }
+        for (int i=heap.length/2 - 1; i>=0; i--) {
+            minHeapifyWithNode(heap, i, K);
+        }
+        // min heap build prep end
+
+        return new int[]{1};
+    }
+
 }
